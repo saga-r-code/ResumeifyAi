@@ -8,6 +8,7 @@ import Hero from "./LandingPage/components/Hero";
 import Testimonials from "./LandingPage/components/Testimonials";
 
 export default function Page() {
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
 
