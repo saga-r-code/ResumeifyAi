@@ -28,7 +28,7 @@ const ResumeEditor = () => {
   )?.component;
 
   return (
-    <div className="flex grow flex-col">
+    <div className="flex grow flex-col ">
       <header className="space-y-1.5 border-b px-3 py-5 text-center">
         <h1 className="text-2xl font-bold">Design Your Resume</h1>
         <p className="text-muted-foreground text-sm">
@@ -49,7 +49,7 @@ const ResumeEditor = () => {
               )}
             </div>
             <div className="grow md:border-r" />
-            <div className="hidden w-1/2 md:flex">
+            <div className="hidden w-1/2 md:flex overflow-y-auto">
               <pre>{JSON.stringify(resumeData, null, 2)}</pre>
             </div>
           </div>

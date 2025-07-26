@@ -47,6 +47,7 @@ const WorkExperieceForm = ({ resumeData, setResumeData }: EditorFormProps) => {
     control: form.control,
     name: "workExperiences",
   });
+  
   return (
     <div className="mx-auto max-w-xl space-y-6">
       <div className="space-y-1.5 text-center">

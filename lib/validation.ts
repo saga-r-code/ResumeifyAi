@@ -69,12 +69,24 @@ export const educationSchema = z.object({
     .optional(),
 });
 
+//  Skills
+export const skillsSchema = z.object({
+  skills: z.array(z.string().trim()).optional(),
+});
+
+//  Summary
+export const summarySchema = z.object({
+  summary: optionString,
+});
+
 //  Resume
 export const resumeSchema = z.object({
   ...generalInfoSchema.shape,
   ...personalInfoSchema.shape,
   ...workExperienceSchema.shape,
   ...educationSchema.shape,
+  ...skillsSchema.shape,
+  ...summarySchema.shape,
 });
 
 // Scema Types
@@ -82,6 +94,8 @@ export type PersonalInfoValues = z.infer<typeof personalInfoSchema>;
 export type GeneralInfoValues = z.infer<typeof generalInfoSchema>;
 export type WorkExperienceValues = z.infer<typeof workExperienceSchema>;
 export type EducationValues = z.infer<typeof educationSchema>;
+export type SkillsValues = z.infer<typeof skillsSchema>;
+export type SummaryValues = z.infer<typeof summarySchema>;
 export type ResumeValues = Omit<z.infer<typeof resumeSchema>, "photo"> & {
   id?: string;
   photo?: File | string | null;
