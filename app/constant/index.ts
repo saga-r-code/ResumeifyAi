@@ -1,11 +1,5 @@
-import {
-
-  Github,
-  Linkedin,
-  Instagram,
-  MessageCircleMore,
-} from "lucide-react";
-import { Footer, Testimonials } from "./type";
+import { Github, Linkedin, Instagram, MessageCircleMore } from "lucide-react";
+import { Footer, Testimonials } from "@/lib/type";
 
 export const testimonialsData: Testimonials[] = [
   {
@@ -34,7 +28,7 @@ export const testimonialsData: Testimonials[] = [
   },
 ];
 
-export const footerData: Footer ={
+export const footerData: Footer = {
   links: [
     {
       title: "Product",
@@ -88,4 +82,3 @@ export const footerData: Footer ={
     },
   ],
 };
-

@@ -1,19 +1,19 @@
 import { FileText } from "lucide-react";
 import React, { createElement } from "react";
-import { footerData } from "@/app/constant";
 import Link from "next/link";
+import { footerData } from "@/app/constant";
 
 const Footer = () => {
   return (
-    <footer className="border-t bg-muted/30">
-      <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <footer className="bg-muted/30 border-t">
+      <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+            <div className="mb-4 flex items-center space-x-2">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-purple-600">
                 <FileText className="h-4 w-4 text-white" />
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-xl font-bold text-transparent">
                 ResumeAI
               </span>
             </div>
@@ -24,8 +24,8 @@ const Footer = () => {
 
           {footerData.links.map((link) => (
             <div key={link.title}>
-              <h4 className="font-semibold mb-4">{link.title}</h4>
-              <ul className="space-y-2 text-muted-foreground text-sm">
+              <h4 className="mb-4 font-semibold">{link.title}</h4>
+              <ul className="text-muted-foreground space-y-2 text-sm">
                 {link.items.map((item) => (
                   <li key={item.label}>
                     <Link
@@ -41,7 +41,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="flex justify-between border-t mt-8 pt-6 text-center text-muted-foreground text-sm">
+        <div className="text-muted-foreground mt-8 flex justify-between border-t pt-6 text-center text-sm">
           <Link
             href="https://shah-sagar.netlify.app"
             target="_blank"
@@ -49,7 +49,7 @@ const Footer = () => {
           >
             {footerData.copyright}
           </Link>
-          <ul className="flex gap-5 ">
+          <ul className="flex gap-5">
             {footerData.socialLinks.map((socialLink, index) => (
               <li key={index}>
                 <Link

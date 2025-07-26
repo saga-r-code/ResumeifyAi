@@ -13,16 +13,13 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
   {
     rules: {
-      "import/no-unresolved": "error",
-      "no-console": [
-        "error",
-        {
-          allow: ["warn", "error"],
-        },
+      "@tyescript-eslint/no-unused-vars": [
+        "error", {
+          "ignoreRestSiblings": true
+        }
       ],
     },
   },
 ];
 
 export default eslintConfig;
-

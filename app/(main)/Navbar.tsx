@@ -9,7 +9,9 @@ import { dark } from "@clerk/themes";
 import { useTheme } from "next-themes";
 
 const Navbar = () => {
+  
   const { theme } = useTheme();
+
   return (
     <div className="border-b shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-3">
